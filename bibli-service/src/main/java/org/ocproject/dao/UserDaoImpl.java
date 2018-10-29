@@ -39,7 +39,7 @@ public class UserDaoImpl implements UserDao{
 		
 	}
 	
-public ResultSet select(ApplicationContext context,String pseudo) {
+	public ResultSet select(ApplicationContext context,String pseudo) {
 		
 		Connection connexion;
 		PreparedStatement prepStmt;

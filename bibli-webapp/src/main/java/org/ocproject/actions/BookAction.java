@@ -131,15 +131,29 @@ public class BookAction extends ActionSupport{
 		cal.add(Calendar.DAY_OF_MONTH, 15);
 		
 		actualYear = cal.get(Calendar.YEAR);
-		month = cal.get(Calendar.MONTH);
-		actualDay = cal.get(Calendar.DAY_OF_MONTH);
-		actualMonth = month+1;
+                month = cal.get(Calendar.MONTH);
+                actualDay = cal.get(Calendar.DAY_OF_MONTH);
+                actualMonth = month+1;
 		
-		String returnYear = ((Integer)actualYear).toString();
-		String returnMonth = ((Integer)actualMonth).toString();
-		String returntDay = ((Integer)actualDay).toString();
+		String returnYear = null;
+		String returnMonth = null;
+		String returnDay = null;
 		
-		String returnDate = returntDay+returnMonth+returnYear;
+		if(actualMonth < 10) {
+		    returnMonth = "0"+((Integer)actualMonth).toString();
+                }else {
+                    returnMonth = ((Integer)actualMonth).toString();
+                }
+		if(actualDay < 10) {
+		    returnDay = "0"+((Integer)actualDay).toString();
+                }else {
+                    returnDay = ((Integer)actualDay).toString();
+                }
+		
+		returnYear = ((Integer)actualYear).toString();
+		
+		
+		String returnDate = returnDay+returnMonth+returnYear;
 		
 		if (id_livre != null && id != null) {
 			this.livre = livreManager.emprunterLivre(id_livre);

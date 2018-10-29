@@ -113,7 +113,5 @@
   <modules>
     <module>bibli-service</module>
     <module>bibli-webapp</module>
-    <module>bibli-db</module>
-    <module>bibli-batch</module>
   </modules>
 </project>

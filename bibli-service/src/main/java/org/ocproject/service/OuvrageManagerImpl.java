@@ -77,6 +77,7 @@ public class OuvrageManagerImpl extends AbstractManager {
 		return resultat;
 		
 	}
+	
 	@WebMethod
 	public Ouvrage emprunterOuvrage(int id_livre, int ide, String date_emprunt, String date_retour) {
 			
